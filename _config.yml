@@ -115,7 +115,7 @@ analytics:
 # Site Author
 author:
   name             : "Tyler Paine"
-  avatar           : "/assets/images/tpaine_bio-photo.jpg"
+  avatar           : "/assets/images/tpaine_bio_photo.jpg"
   bio              : "MIT MechE Research Scientist, Marine Roboticist "
   location         : "Cambridge, MA"
   email            : "tpaine@mit.edu"
