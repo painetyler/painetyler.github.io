@@ -1,0 +1,47 @@
+---
+layout: single
+title: Research
+permalink: /research/
+author_profile: true
+classes: wide
+---
+
+<h2>Research: Models</h2>
+
+My work uses two types of models.  The first type captures the properties of the environment (e.g., bathymetry, acoustic energy propagation) or the motion of a robot within that environment (e.g., underwater vehicle dynamics).  These methods address the adaptive sampling problem, in which marine robots build models in real time and use them to determine where to sample to maximize efficiency.  These models allow robots to interpret tangible environmental features in a quantifiable and useful way, while also estimating their own dynamics in real time to inform decision-making and control.
+
+Figs: Nullspace parameter identification; acoustic ray trace
+
+
+The second type of model captures the process of arriving at an (often) optimal decision and determining how to adjust actuators to achieve that action.  These methods span several foundational areas of artificial intelligence: planning, optimization, and control.  With this understanding, robots can be equipped with intelligence to make effective decisions when interacting with the world.
+
+Figs: CBPA (2 figures)
+
+My work focuses on developing new models in both areas and integrating them to maximize performance (e.g., minimizing survey time and extending the operational envelope).  In particular, I am interested in teams of robots that can collectively build environmental models while simultaneously dividing into subteams and allocating tasks to best achieve goals such as sampling.  All of these methods are decentralized or distributed, meaning there is no central controller or algorithm.
+
+
+<h2>Research: Analysis</h2>
+
+I use a range of analysis techniques to evaluate how well a model matches reality and to characterize performance limits.  Mathematical analysis (sometimes called formal methods) allows us to be more certain about performance without relying on randomized simulation.  To accomplish this, I use Lyapunov stability analysis, graph theory, contraction analysis, observability analysis, control barrier function (CBF)-based forward invariance arguments, reachability analysis, and ergodic analysis.  Although models are never perfect, a key benefit of analysis is that we can often bound performance degradation (e.g., if the model error is ε, then performance degrades by at most δ).
+
+Figs: CDC
+
+In some cases, randomized simulations are the only practical evidence that a new technique will perform well in the real world.  I have simulated thousands of multi-agent missions and hundreds of thousands of USV encounters.  These simulations generate data for learning-based pipelines of policies and behaviors.
+
+Figs: Ray trace animation; PBACS curves
+
+Of course, the gold standard is to use both analysis and simulation.  Aircraft autopilot controllers are a prime example of autonomy systems that have passed both tests.  We can explain analytically why they are stable, and extensive flight data corroborates this understanding.  Together, theory and data enable certification of these systems’ safety - one reason air travel is so reliable.  My goal is to advance engineering science to make increasingly complex systems equally reliable and robust.
+
+Figs: CBF
+
+<h2>Research: Marine Robotics</h2>
+
+The only way to validate models and analysis is through real robotic system deployments.  Moreover, real-world deployments are essential for delivering on the promise of increased data collection and reduced risk to human life.
+Figs: Herons (IROS paper); WP USVs; JHU Iver3; WP Australia deployment; SeaBeaver (video); hull crawler
+
+Figs: HVU logs and imagery
+
+I leverage my experience as a licensed machine design engineer to develop a range of marine robots, including unmanned surface vehicles, autonomous underwater vehicles, and hull-crawling robots.  These projects span both my graduate studies and my work as a design engineer in the Rapid Prototype and Fabrication Division at the Naval Undersea Warfare Center (NUWC) Keyport.  At NUWC Keyport, I honed my skills in electromechanical design, structural analysis, and fabrication, and grew into a lead engineer working with teams to design and deliver technically complex systems.  This work involved hundreds of pages of drawings and analysis, some of which formed the basis for patents and awards.
+
+
+My career goal is to build on this unique experience as both a research scientist and professional engineer to develop robotic systems that perform reliably in real-world environments.
