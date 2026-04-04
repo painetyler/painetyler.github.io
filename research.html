@@ -6,6 +6,17 @@ author_profile: true
 classes: wide
 ---
 
+feature_row_models_env:
+  - image_path: /assets/images/nullspace_model.png
+    alt: "Null space model"
+    excerpt: "Models of vehicle motion with null space parameterizations for <a href="https://doi.org/10.1109/IROS.2018.8594257">optimal</a> and <a href="https://doi.org/10.1177/02783649231191184">adaptive identification</a>."
+  - image_path: /assets/images/ray_trace.png
+    alt: "Geometric ray tracing"
+    excerpt: "Geometric stochastic <a href="https://doi.org/10.1121/10.0025522">ray propagation</a> using the special Euclidean group."
+
+
+
+
 <h2>Research: Models</h2>
 
 My work uses two types of models.  The first type captures the properties of the environment (e.g., bathymetry, acoustic energy propagation) or the motion of a robot within that environment (e.g., underwater vehicle dynamics).  These methods address the adaptive sampling problem, in which marine robots build models in real time and use them to determine where to sample to maximize efficiency.  These models allow robots to interpret tangible environmental features in a quantifiable and useful way, while also estimating their own dynamics in real time to inform decision-making and control.
@@ -27,6 +38,10 @@ My work uses two types of models.  The first type captures the properties of the
 The second type of model captures the process of arriving at an (often) optimal decision and determining how to adjust actuators to achieve that action.  These methods span several foundational areas of artificial intelligence: planning, optimization, and control.  With this understanding, robots can be equipped with intelligence to make effective decisions when interacting with the world.
 
 Figs: CBPA (2 figures)
+
+
+{% include feature_row_models_env %}
+
 
 My work focuses on developing new models in both areas and integrating them to maximize performance (e.g., minimizing survey time and extending the operational envelope).  In particular, I am interested in teams of robots that can collectively build environmental models while simultaneously dividing into subteams and allocating tasks to best achieve goals such as sampling.  All of these methods are decentralized or distributed, meaning there is no central controller or algorithm.
 
