@@ -7,3 +7,25 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between figures */
+}
+
+.image-column {
+  width: 48%; /* Adjust for desired width */
+}
+
+.image-column img {
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  font-size: 0.8em;
+  text-align: center;
+  color: #555;
+}
