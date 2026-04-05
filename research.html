@@ -4,6 +4,10 @@ title: Research
 permalink: /research/
 author_profile: true
 classes: wide
+toc: true
+toc_sticky: true
+toc_label: "On this page"
+tock_icon: "cog"
 ---
 
 
@@ -11,7 +15,8 @@ classes: wide
 
 <h2>Models</h2>
 
-<h3>My work uses two types of models</h3>
+
+<h3>Environment Models</h3>
 
 
 The first type captures the <u>key properties of the environment</u> (e.g., bathymetry, acoustic energy propagation) or the motion of a robot within that environment (e.g., underwater vehicle dynamics).  These methods address the adaptive sampling problem, in which marine robots build models in real time and use them to determine where to sample to maximize efficiency.  These models allow robots to interpret tangible environmental features in a quantifiable and useful way, while also estimating their own dynamics in real time to inform decision-making and control.
@@ -30,6 +35,7 @@ The first type captures the <u>key properties of the environment</u> (e.g., bath
 </div>
 
 
+<h3>Autonomy Models</h3>
 The second type of model captures the <u>process of making a decision</u> and determining how to adjust actuators to achieve that action.  These methods span several foundational areas of artificial intelligence: planning, allocation, and control.  With this understanding, robots can be equipped with intelligence to make effective decisions when interacting with the world.
 
 
@@ -45,7 +51,7 @@ The second type of model captures the <u>process of making a decision</u> and de
 </div>
 
 
-
+<h3>Both Models_Together</h3>
 My work focuses on developing new models in <u>both areas and integrating them together</u> to maximize performance (e.g., minimizing survey time and extending the operational envelope).  In particular, I am interested in teams of robots that can collectively build environmental models while simultaneously dividing into subteams and allocating tasks to best achieve goals such as sampling.  All of these methods are decentralized or distributed, meaning there is no central controller or algorithm.
 
 
@@ -75,7 +81,7 @@ In some cases, randomized simulations are the only practical evidence that a new
     <source src="{{ '/assets/videos/ray_trace.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support the video tag.
   </video>
-  <figcaption>The distribution of ray locations at approximately 40 km in the Beaufort Lens using the <a href="https://doi.org/10.1121/10.0025522">SE(2) model</a>. </figcaption>
+  <figcaption>The distribution of ray locations along a simulated ray in the Beaufort Lens using the <a href="https://doi.org/10.1121/10.0025522">SE(2) model</a>. </figcaption>
 </figure>
 
 I have simulated thousands of multi-agent missions and hundreds of thousands of USV encounters.  In addition for validation, these simulations generate data for learning-based pipelines of policies and behaviors.
@@ -159,5 +165,5 @@ I leverage my experience as a licensed machine design engineer to develop a rang
 
 These projects span <u>both my graduate studies and my work as a design engineer</u> in the Rapid Prototype and Fabrication Division at the Naval Undersea Warfare Center (NUWC) Keyport.  At NUWC Keyport, I honed my skills in electromechanical design, structural analysis, and fabrication, and grew into a lead engineer working with teams to design and deliver technically complex systems.  This work involved hundreds of pages of drawings and analysis, some of which formed the basis for patents and awards.
 
-</h3>Goals<h3>
+<h3>Goals</h3>
 My career goal is to build on this unique experience as both a research scientist and professional engineer to develop robotic systems that perform reliably in real-world environments.
