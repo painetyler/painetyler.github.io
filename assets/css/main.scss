@@ -12,6 +12,7 @@ search: false
 .side-by-side {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   gap: 20px; /* Space between figures */
 }
 
