@@ -14,7 +14,7 @@ classes: wide
 <h3>My work uses two types of models</h3>
 
 
-The first type captures the properties of the environment (e.g., bathymetry, acoustic energy propagation) or the motion of a robot within that environment (e.g., underwater vehicle dynamics).  These methods address the adaptive sampling problem, in which marine robots build models in real time and use them to determine where to sample to maximize efficiency.  These models allow robots to interpret tangible environmental features in a quantifiable and useful way, while also estimating their own dynamics in real time to inform decision-making and control.
+The first type captures the <u>key properties of the environment</u> (e.g., bathymetry, acoustic energy propagation) or the motion of a robot within that environment (e.g., underwater vehicle dynamics).  These methods address the adaptive sampling problem, in which marine robots build models in real time and use them to determine where to sample to maximize efficiency.  These models allow robots to interpret tangible environmental features in a quantifiable and useful way, while also estimating their own dynamics in real time to inform decision-making and control.
 
 
 
@@ -30,13 +30,13 @@ The first type captures the properties of the environment (e.g., bathymetry, aco
 </div>
 
 
-The second type of model captures the process of arriving at an (often) optimal decision and determining how to adjust actuators to achieve that action.  These methods span several foundational areas of artificial intelligence: planning, optimization, and control.  With this understanding, robots can be equipped with intelligence to make effective decisions when interacting with the world.
+The second type of model captures the <u>process of making a decision</u> and determining how to adjust actuators to achieve that action.  These methods span several foundational areas of artificial intelligence: planning, optimization, and control.  With this understanding, robots can be equipped with intelligence to make effective decisions when interacting with the world.
 
 
 <div class="side-by-side">
   <div class="image-column">
     <img src="/assets/images/CBPA_overview.png" alt="CBPA model">
-    <p class="caption">A <a href="https://doi.org/10.48550/arXiv.2511.02147">hierarchical model</a> of distributed multi-robot autonomy that uses opinion dynamics, multi-objective behavior optimization, and low level control.  The <a href="https://doi.org/10.1109/ICRA57147.2024.10611032">autonomy stack</a> is replicated on each vehicle.</p>
+    <p class="caption">A <a href="https://doi.org/10.48550/arXiv.2511.02147">hierarchical model</a> of distributed multi-robot autonomy.  The <a href="https://doi.org/10.1109/ICRA57147.2024.10611032">autonomy stack</a> is replicated on each vehicle.</p>
   </div>
   <div class="image-column">
     <img src="/assets/images/model_taxa.png" alt="Model Taxa">
@@ -46,16 +46,39 @@ The second type of model captures the process of arriving at an (often) optimal 
 
 
 
-My work focuses on developing new models in both areas and integrating them to maximize performance (e.g., minimizing survey time and extending the operational envelope).  In particular, I am interested in teams of robots that can collectively build environmental models while simultaneously dividing into subteams and allocating tasks to best achieve goals such as sampling.  All of these methods are decentralized or distributed, meaning there is no central controller or algorithm.
+My work focuses on developing new models in <u>both</> areas and <u>integrating them together</u> to maximize performance (e.g., minimizing survey time and extending the operational envelope).  In particular, I am interested in teams of robots that can collectively build environmental models while simultaneously dividing into subteams and allocating tasks to best achieve goals such as sampling.  All of these methods are decentralized or distributed, meaning there is no central controller or algorithm.
 
 
 <h2>Research: Analysis</h2>
 
 I use a range of analysis techniques to evaluate how well a model matches reality and to characterize performance limits.  Mathematical analysis (sometimes called formal methods) allows us to be more certain about performance without relying on randomized simulation.  To accomplish this, I use Lyapunov stability analysis, graph theory, contraction analysis, observability analysis, control barrier function (CBF)-based forward invariance arguments, reachability analysis, and ergodic analysis.  Although models are never perfect, a key benefit of analysis is that we can often bound performance degradation (e.g., if the model error is ε, then performance degrades by at most δ).
 
-Figs: CDC
 
-In some cases, randomized simulations are the only practical evidence that a new technique will perform well in the real world.  I have simulated thousands of multi-agent missions and hundreds of thousands of USV encounters.  These simulations generate data for learning-based pipelines of policies and behaviors.
+
+<div class="side-by-side">
+  <div class="image-column">
+    <img src="/assets/images/theta_g" alt="Interlacing Argument">
+    <p class="caption">A geometric view of the <a href="https://doi.org/10.1109/CDC56724.2024.10886010">interlacing argument</a>.</p>
+  </div>
+  <div class="image-column">
+    <img src="/assets/images/nul_conv.png" alt="Nullspace Convergence Arguement ">
+    <p class="caption">A geometric view of the convergence of the parameter estimates in models with <a href="https://doi.org/10.1177/02783649231191184">null space-based parameterizations</a>. </p>
+  </div>
+</div>
+
+
+<h3>Randomized Simulation</h3>
+In some cases, randomized simulations are the only practical evidence that a new technique will perform well in the real world. 
+
+<figure>
+  <video width="100%" height="auto" controls autoplay loop muted>
+    <source src="{{ '/assets/videos/ray_trace.mp4' | relative_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+  <figcaption>The distribution of ray locations at approximately 40 km in the Beaufort Lens using the <a href="https://doi.org/10.1121/10.0025522">SE(2) model</a>. </figcaption>
+</figure>
+
+I have simulated thousands of multi-agent missions and hundreds of thousands of USV encounters.  These simulations generate data for learning-based pipelines of policies and behaviors.
 
 Figs: Ray trace animation; PBACS curves
 
