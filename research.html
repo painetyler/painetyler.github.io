@@ -3,19 +3,30 @@ layout: single
 title: Research
 permalink: /research/
 author_profile: true
-toc: true
-toc_sticky: true
-toc_label: "On this page"
-tock_icon: "cog"
+classes: wide
 ---
 
+<nav>
+  <ul>
+    <li><a href="#models">Models</a></li>
+    <ul>
+      <li><a href="#env-models">Environment Models</a></li>
+      <li><a href="#auto-models">Autonomy Models</a></li>
+      <li><a href="#both-models">Both Models Together</a></li>
+    </ul>
+    <li><a href="#analysis">Analysis</a></li>
+    <ul>
+      <li><a href="#rand-sim">Randomized Simulation</a></li>
+    </ul>
+    <li><a href="#robots">Application to Marine Robots</a></li>
+  </ul>
+</nav>
 
 
+<h2 id="models">Models</h2>
 
-<h2>Models</h2>
 
-
-<h3>Environment Models</h3>
+<h3 id="env-models">Environment Models</h3>
 
 
 The first type captures the <u>key properties of the environment</u> (e.g., bathymetry, acoustic energy propagation) or the motion of a robot within that environment (e.g., underwater vehicle dynamics).  These methods address the adaptive sampling problem, in which marine robots build models in real time and use them to determine where to sample to maximize efficiency.  These models allow robots to interpret tangible environmental features in a quantifiable and useful way, while also estimating their own dynamics in real time to inform decision-making and control.
@@ -34,7 +45,7 @@ The first type captures the <u>key properties of the environment</u> (e.g., bath
 </div>
 
 
-<h3>Autonomy Models</h3>
+<h3 id="auto-models">Autonomy Models</h3>
 The second type of model captures the <u>process of making a decision</u> and determining how to adjust actuators to achieve that action.  These methods span several foundational areas of artificial intelligence: planning, allocation, and control.  With this understanding, robots can be equipped with intelligence to make effective decisions when interacting with the world.
 
 
@@ -50,11 +61,11 @@ The second type of model captures the <u>process of making a decision</u> and de
 </div>
 
 
-<h3>Both Models Together</h3>
+<h3 id="both-models">Both Models Together</h3>
 My work focuses on developing new models in <u>both areas and integrating them together</u> to maximize performance (e.g., minimizing survey time and extending the operational envelope).  In particular, I am interested in teams of robots that can collectively build environmental models while simultaneously dividing into subteams and allocating tasks to best achieve goals such as sampling.  All of these methods are decentralized or distributed, meaning there is no central controller or algorithm.
 
 
-<h2>Analysis</h2>
+<h2 id="analysis">Analysis</h2>
 
 I use a range of analysis techniques to evaluate how well a model matches reality and to characterize performance limits.  Mathematical analysis (sometimes called formal methods) allows us to be more certain about performance without relying on randomized simulation.  To accomplish this, I use <a href="https://doi.org/10.1177/02783649231191184">Lyapunov stability analysis</a>, <a href="https://doi.org/10.1109/CDC56724.2024.10886010">graph theory</a>, <a href="https://doi.org/10.1109/IROS55552.2023.10341433">contraction analysis</a>, <a href="https://doi.org/10.1109/ICRA48506.2021.9561892">observability analysis</a>, <a href="https://doi.org/10.48550/arXiv.2601.11335">control barrier function (CBF)-based forward invariance arguments</a>.  I have collaborated with others on projects were we use <a href="https://doi.org/10.1109/TCST.2025.3593237">reachability analysis</a> and <a href="https://doi.org/10.48550/arXiv.2503.10853">ergodic analysis</a>.  Although models are never perfect, a key benefit of analysis is that we can often bound performance degradation (e.g., if the model error is ε, then performance degrades by at most δ).
 
@@ -72,7 +83,7 @@ I use a range of analysis techniques to evaluate how well a model matches realit
 </div>
 
 
-<h3>Randomized Simulation</h3>
+<h3 id="rand-sim">Randomized Simulation</h3>
 In some cases, randomized simulations are the only practical evidence that a new technique will perform well in the real world. 
 
 <figure>
@@ -106,9 +117,9 @@ Of course, the gold standard is to use both analysis and simulation.  Aircraft a
 
 
 
-<h2>Application to Marine Robotics</h2>
+<h2 id="robots">Application to Marine Robotics</h2>
 
-The only way to validate models and analysis is through real robotic system deployments.  Moreover, real-world deployments are essential for delivering on the promise of increased data collection and reduced risk to human life.  
+The only way to validate models and analysis is through real robotic system deployments.  Moreover, real-world deployments are essential for delivering on the promise of increased scientific data collection and reduced risk to human life.  
 I leverage my experience as a licensed machine design engineer to develop a range of marine robots, including unmanned surface vehicles, autonomous underwater vehicles, and hull-crawling robots.
 
 <div class="side-by-side">
@@ -164,5 +175,5 @@ I leverage my experience as a licensed machine design engineer to develop a rang
 
 These projects span <u>both my graduate studies and my work as a design engineer</u> in the Rapid Prototype and Fabrication Division at the Naval Undersea Warfare Center (NUWC) Keyport.  At NUWC Keyport, I honed my skills in electromechanical design, structural analysis, and fabrication, and grew into a lead engineer working with teams to design and deliver technically complex systems.  This work involved hundreds of pages of drawings and analysis, some of which formed the basis for patents and awards.
 
-<h3>Goals</h3>
+<h3>Future work</h3>
 My career goal is to build on this unique experience as both a research scientist and professional engineer to develop robotic systems that perform reliably in real-world environments.
