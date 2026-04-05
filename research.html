@@ -49,7 +49,7 @@ The second type of model captures the <u>process of making a decision</u> and de
 My work focuses on developing new models in <u>both areas and integrating them together</u> to maximize performance (e.g., minimizing survey time and extending the operational envelope).  In particular, I am interested in teams of robots that can collectively build environmental models while simultaneously dividing into subteams and allocating tasks to best achieve goals such as sampling.  All of these methods are decentralized or distributed, meaning there is no central controller or algorithm.
 
 
-<h2>Research: Analysis</h2>
+<h2>Analysis</h2>
 
 I use a range of analysis techniques to evaluate how well a model matches reality and to characterize performance limits.  Mathematical analysis (sometimes called formal methods) allows us to be more certain about performance without relying on randomized simulation.  To accomplish this, I use <a href="https://doi.org/10.1177/02783649231191184">Lyapunov stability analysis</a>, <a href="https://doi.org/10.1109/CDC56724.2024.10886010">graph theory</a>, <a href="https://doi.org/10.1109/IROS55552.2023.10341433">contraction analysis</a>, <a href="https://doi.org/10.1109/ICRA48506.2021.9561892">observability analysis</a>, <a href="https://doi.org/10.48550/arXiv.2601.11335">control barrier function (CBF)-based forward invariance arguments</a>.  I have collaborated with others on projects were we use <a href="https://doi.org/10.1109/TCST.2025.3593237">reachability analysis</a> and <a href="https://doi.org/10.48550/arXiv.2503.10853">ergodic analysis</a>.  Although models are never perfect, a key benefit of analysis is that we can often bound performance degradation (e.g., if the model error is ε, then performance degrades by at most δ).
 
@@ -87,26 +87,66 @@ I have simulated thousands of multi-agent missions and hundreds of thousands of 
   </div>
   <div class="image-column">
     <img src="/assets/images/CBPA_VPG.png" alt="Model VPG study">
-    <p class="caption">Evolution of performance in <a href="https://doi.org/10.48550/arXiv.2511.02147">multi-USV cooperative adaptive sampling</a> during several trials of vanilla policy gradient to optimize parameters in multi-robot model.  We can only squeeze out a bit more performance using RL to find the right parameters.  </p>
+    <p class="caption">Evolution of performance in <a href="https://doi.org/10.48550/arXiv.2511.02147">multi-USV cooperative adaptive sampling</a> during several trials of vanilla policy gradient to optimize parameters in multi-robot model.  We can only squeeze out a bit more performance by using RL to find the right parameters.  </p>
   </div>
 </div>
 
 Of course, the gold standard is to use both analysis and simulation.  Aircraft autopilot controllers are a prime example of autonomy systems that have passed both tests.  We can explain analytically why they are stable, and extensive flight data corroborates this understanding.  Together, theory and data enable certification of these systems’ safety - one reason air travel is so reliable.  My goal is to advance engineering science to make increasingly complex systems equally reliable and robust.
 
 
-<figure class="half">
+<figure class="half center">
   <img src="../assets/images/CBF_encounter_freq.png">
   <figcaption>Frequency of relative positions of contacts in 100,000 randomized encounters to test the theoretical performance of the <a href="https://doi.org/10.48550/arXiv.2601.11335">control safety filter</a>.  Ensuring complete coverage of all scenarios is critical.   </figcaption>
 </figure>
 
-<h2>Research: Marine Robotics</h2>
+
+
+<h2>Application to Marine Robotics</h2>
 
 The only way to validate models and analysis is through real robotic system deployments.  Moreover, real-world deployments are essential for delivering on the promise of increased data collection and reduced risk to human life.
-Figs: Herons (IROS paper); WP USVs; JHU Iver3; WP Australia deployment; SeaBeaver (video); hull crawler
 
-Figs: HVU logs and imagery
+<div class="side-by-side">
+  <div class="image-column">
+    <img src="/assets/images/Herons.png" alt="Herons">
+    <p class="caption">MIT fleet of <a href="https://oceanai.mit.edu/herons/pmwiki/pmwiki.php?n=Main.HomePage">Clearpath Heron USVs </a> used for all types of autonomy testing.</p>
+  </div>
+  <div class="image-column">
+    <img src="/assets/images/Heron_shadow.jpg" alt="USV Shadowing">
+    <p class="caption">Heron USVs shadowing the launch boat.</p>
+  </div>
+</div>
+
+
+<div class="side-by-side">
+  <div class="image-column">
+    <img src="/assets/images/jervis23_605.jpg" alt="Jervis CTF game">
+    <p class="caption">Surveyors prepared for beach launch in Australia as part of the <a href="https://doi.org/10.48550/arXiv.2404.17038">AI Strategic Challenge 2023 Event</a>.</p>
+  </div>
+  <div class="image-column">
+    <img src="/assets/images/CTF.png" alt="USV Shadowing USVs">
+    <p class="caption"> Fleet of Surveyor USVs compete in a game of <a href="https://doi.org/10.48550/arXiv.2511.02147">capture-the-flag</a> at West Point.</p>
+  </div>
+</div>
+
+
+<div class="side-by-side">
+  <div class="image-column">
+    <img src="/assets/images/Heron_WP_2022.jpeg" alt="Bathy survey 2022">
+    <p class="caption">Team of Heron USVs completing a <a href="https://doi.org/10.1109/LRA.2023.3279584">collaborative bathymetry survey</a>.</p>
+  </div>
+  <div class="image-column">
+    <img src="/assets/images/HVU.jpg" alt="High Value Unit testing">
+    <p class="caption"> Test of collaborative autonomy for <a href="https://doi.org/10.48550/arXiv.2511.02147">high value unit (HVU) protection</a> with dynamic rotation of patrolling USVs.</p>
+  </div>
+</div>
+
+
+
+
+
+Figs:JHU Iver3; SeaBeaver (video); hull crawler
+
 
 I leverage my experience as a licensed machine design engineer to develop a range of marine robots, including unmanned surface vehicles, autonomous underwater vehicles, and hull-crawling robots.  These projects span both my graduate studies and my work as a design engineer in the Rapid Prototype and Fabrication Division at the Naval Undersea Warfare Center (NUWC) Keyport.  At NUWC Keyport, I honed my skills in electromechanical design, structural analysis, and fabrication, and grew into a lead engineer working with teams to design and deliver technically complex systems.  This work involved hundreds of pages of drawings and analysis, some of which formed the basis for patents and awards.
-
-
+<br>
 My career goal is to build on this unique experience as both a research scientist and professional engineer to develop robotic systems that perform reliably in real-world environments.
