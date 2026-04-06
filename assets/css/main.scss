@@ -33,3 +33,13 @@ search: false
   color: #000;
   margin-top: 8px;
 }
+
+
+/* Your Custom Styles */
+.mobile-only { display: none; }
+.desktop-only { display: block; }
+
+@media (max-width: 767px) {
+  .mobile-only { display: block; }
+  .desktop-only { display: none; }
+}
