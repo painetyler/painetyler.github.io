@@ -6,6 +6,20 @@ author_profile: true
 classes: wide
 ---
 
+
+<style>
+  /* Hide YouTube on desktop, show local video */
+  .mobile-only { display: none; }
+  .desktop-only { display: block; }
+
+  /* Show YouTube on mobile, hide local video */
+  @media (max-width: 767px) {
+    .mobile-only { display: block; }
+    .desktop-only { display: none; }
+  }
+</style>
+
+
 <nav>
   <ul>
     <li><a href="#models">Models</a></li>
@@ -13,6 +27,7 @@ classes: wide
     <li><a href="#robots">Applications to Marine Robots</a></li>
   </ul>
 </nav>
+
 
 
 <h2 id="models">Models</h2>
