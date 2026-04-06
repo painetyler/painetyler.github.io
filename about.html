@@ -16,23 +16,13 @@ We develop mathematical models of environments and autonomous systems, analyze t
 
 
 <figure>
-  <!-- Desktop Local Video -->
-  <div class="desktop-only">
-    <video width="100%" height="auto" controls autoplay loop muted>
-      <source src="{{ '/assets/videos/8_USV_multi_test_comp.mp4' | relative_url }}" type="video/mp4">
+  <video width="100%" height="auto" controls autoplay loop muted>
+    <!-- Desktop Local Video -->
+    <source src="{{ '/assets/videos/8_USV_multi_test_comp.mp4' | relative_url }}" type="video/mp4" media="(min-width: 768px)">
+      <!-- Mobile YouTube Video -->
+      <source src="{{ '/assets/videos/8_USV_multi_test_super_comp.mp4' | relative_url }}" type="video/mp4">
 	Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <!-- Mobile YouTube Video -->
-  <div class="mobile-only">
-    <iframe width="100%" height="auto" 
-      src="https://www.youtube.com/embed/0ShgRmcsQFc?autoplay=1&mute=1&loop=1&playlist=0ShgRmcsQFc" 
-      title="YouTube video player" frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
+  </video>
   <figcaption>Multi-agent autonomy experiments at MIT using a fleet of Clearpath Heron unmanned surface vehicles.  The goals of this experiment were to evaluate a learned behavior for cooperative search, as well as to validate a <a href="https://doi.org/10.48550/arXiv.2601.11335">distributed safety control filter</a> to prevent collisions.  Some of these behaviors and algorithms for collective intelligence are part of the <a href="https://oceanai.mit.edu/pavlab/pmwiki/pmwiki.php?n=Proj.PopAuto">moos-ivp-multi</a> project.  This particular experiment was conducted in collaboration with <a href="https://everardog.github.io/about">Ever Gonzalez</a> and was filmed by Ethan Phan. </figcaption>
 </figure>
 
