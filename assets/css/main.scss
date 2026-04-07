@@ -14,6 +14,7 @@ search: false
   justify-content: space-between;
   align-items: flex-end;
   gap: 20px; /* Space between figures */
+  margin-top: 20px; 
 }
 
 .image-column {
@@ -23,7 +24,6 @@ search: false
 .image-column img {
   width: 100%;
   height: auto;
-  margin-top: 20px; 
 }
 
 .image-column .image-caption {
